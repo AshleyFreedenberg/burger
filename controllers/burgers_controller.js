@@ -19,7 +19,7 @@ router.post("/burger", (req, res) => {
     ], [
         req.body.burger_name, false 
     ], function (result) {
-            res.json({ id: result.insertId });
+            res.json({ burger: data });
         });
 });
 
