@@ -1,0 +1,32 @@
+<img src="/assets/img/burger_1-16-512.png" alt="Burger Photo">
+
+<h1>Eat-Da-Burger!</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            {{#each burger}}
+            <p>{{burger_name}}</p>
+            {{/each}}
+        </div>
+        <div class="col-4">
+            One of three columns
+        </div>
+        <div class="col-4">
+            One of three columns
+        </div>
+    </div>
+</div>
+
+<p class="p">Enter a burger you want to eat Click the "Submit" button</p>
+<form>
+    <div class="form-group">
+    <label for="newBurger"></label>
+    <textarea class="form-control" id="newBurger" rows="1"></textarea>
+  </div>
+</form>
+<button type="submit" class="btn btn-danger">Submit</button>
+<br>
+<br>
+
+

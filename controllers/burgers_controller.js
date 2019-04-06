@@ -7,17 +7,19 @@ const burger = require("../models/burger.js");
 // show all the burger options
 router.get("/", (req, res) => {
     burger.selectAll((data) => {
-        res.json(data);
+        console.log(data);
+        res.render("index", { burger: data });
     });
 });
 
 // Adds a burger
 router.post("/burger", (req, res) => {
-    burger.insertOne(
-        {
-            burger_name: req.body.burger_name
-        }, data => {
-            res.json(data);
+    burger.insertOne([
+        "burger_name", "devoured"
+    ], [
+        req.body.burger_name, false 
+    ], function (result) {
+            res.json({ id: result.insertId });
         });
 });
 
