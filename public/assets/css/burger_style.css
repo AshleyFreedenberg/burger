@@ -9,15 +9,13 @@ img {
 }
 .container {
     text-align: center;
+    margin-top: 20px;
 };
 
-h1 {
-    display: inline-block;
+#h1 {
+    display: inline-block; 
 }
 
-#row {
-    margin-left: 20%;
-}
 
 #form-group {
     text-align: center;
